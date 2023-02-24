@@ -1,7 +1,8 @@
 import 'dart:async';
-import 'package:biome/client/pages/OnboardingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'OnboardingPage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

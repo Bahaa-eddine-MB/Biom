@@ -1,3 +1,4 @@
+import 'package:biome/client/pages/Home/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/Decoration.dart';
@@ -64,6 +65,7 @@ class _ConfirmEmailPageState extends State<ConfirmEmailPage> {
                                 duration: const Duration(seconds: 3),
                                 forwardAnimationCurve: Curves.easeOutBack,
                               );
+                              Get.to(()=>const HomePage());
                             },
                             style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.symmetric(

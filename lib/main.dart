@@ -1,6 +1,7 @@
-import 'package:biome/client/pages/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'client/pages/Getting Started/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());

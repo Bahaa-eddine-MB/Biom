@@ -1,5 +1,6 @@
 import 'package:biome/client/pages/Auth/PasswordRecoverPage.dart';
 import 'package:biome/client/pages/Auth/SignUpPage.dart';
+import 'package:biome/client/pages/Home/HomePage.dart';
 import 'package:biome/client/utils/Decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -165,7 +166,7 @@ class _LogingPageState extends State<LogingPage> {
                                 formKey.currentState?.save();
                          
                                 if (formKey.currentState!.validate()) {
-                                  Get.to(() => const SignUpPage());
+                                  Get.to(() => const HomePage());
                                 }
                               },
                               style: ElevatedButton.styleFrom(
