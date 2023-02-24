@@ -1,4 +1,4 @@
-import 'package:biome/client/pages/Auth/LogingPage.dart';
+import 'dart:async';
 import 'package:biome/client/pages/OnboardingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,10 +11,22 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  bool _isVisible = false;
+
   @override
   void initState() {
     super.initState();
+    _Timer();
     _navigation();
+  }
+
+  // ignore: non_constant_identifier_names
+  _Timer() async {
+     Timer(const Duration(milliseconds: 10), () {
+      setState(() {
+        _isVisible = true;
+      });
+    });
   }
 
   _navigation() async {
@@ -26,11 +38,18 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Image(
-          width: 180,
-          image: AssetImage("images/logo.png")),
+    return Scaffold(
+      body: AnimatedOpacity(
+        opacity: _isVisible ? 1.0 : 0,
+        duration: const Duration(milliseconds: 1200),
+        child: const Center(
+          child: Image(
+            width: 180,
+            image: AssetImage(
+              'images/logo.png',
+            ),
+          ),
+        ),
       ),
     );
   }
