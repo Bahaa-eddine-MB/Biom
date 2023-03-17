@@ -75,7 +75,8 @@ class _MapScreenState extends State<MapScreen> {
                   onTap: () {
                     Get.bottomSheet(
                       const TreesScreen(),
-                      isScrollControlled: true,                     
+                      isScrollControlled: true,
+                     
                       backgroundColor: Colors.transparent,
                     );
                   },
