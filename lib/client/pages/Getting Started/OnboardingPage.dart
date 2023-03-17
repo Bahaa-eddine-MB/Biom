@@ -52,7 +52,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             OutlinedButton(
                                 onPressed: () {
                                   _controller.animateToPage(2,
-                                      duration: const Duration(milliseconds: 600),
+                                      duration:
+                                          const Duration(milliseconds: 600),
                                       curve: Curves.easeInOut);
                                 },
                                 style: OutlinedButton.styleFrom(
@@ -63,8 +64,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 0, horizontal: 30),
                                   shape: const RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(15))),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(15))),
                                 ),
                                 child: const Text(
                                   "Skip",
@@ -147,7 +148,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 8),
                                         decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           color: MyDecoration.green,
                                         ),
                                       )),

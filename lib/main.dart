@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'client/pages/Getting Started/SplashScreen.dart';
 
 void main() {
@@ -9,13 +8,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Biom',
       theme: ThemeData(
           primarySwatch: const MaterialColor(
         0xFF83BD75,

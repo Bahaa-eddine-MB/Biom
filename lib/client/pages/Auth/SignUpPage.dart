@@ -1,5 +1,6 @@
 import 'package:biome/client/pages/Auth/ConfirmEmailPage.dart';
 import 'package:biome/client/pages/Auth/LogingPage.dart';
+import 'package:biome/client/utils/TextFeildDecoration.dart';
 import 'package:flutter/material.dart';
 import 'package:biome/client/utils/Decoration.dart';
 import 'package:get/get.dart';
@@ -58,34 +59,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 }
                                 return null;
                               },
-                              decoration: InputDecoration(
-                                errorBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                      width: 2.5,
-                                      color: Colors.red,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)),
-                                focusedErrorBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                    borderSide:
-                                        const BorderSide(color: Colors.red)),
-                                contentPadding: const EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 17),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      width: 3, color: MyDecoration.green),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                labelText: "Name",
-                                labelStyle: const TextStyle(
-                                    color: Colors.grey, fontFamily: "Poppins"),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      width: 2.5,
-                                      color: MyDecoration.green,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
+                              decoration: TextInputDecoration.getInputDecoration(labelText: "Name")
                             ),
                             const SizedBox(
                               height: 35,
@@ -102,34 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 }
                                 return null;
                               },
-                              decoration: InputDecoration(
-                                errorBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                      width: 2.5,
-                                      color: Colors.red,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)),
-                                focusedErrorBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                    borderSide:
-                                        const BorderSide(color: Colors.red)),
-                                contentPadding: const EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 17),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      width: 3, color: MyDecoration.green),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                labelText: "Username",
-                                labelStyle: const TextStyle(
-                                    color: Colors.grey, fontFamily: "Poppins"),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      width: 2.5,
-                                      color: MyDecoration.green,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
+                              decoration: TextInputDecoration.getInputDecoration(labelText: "Username")
                             ),
                             const SizedBox(
                               height: 35,
@@ -147,34 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 return null;
                               },
                               keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                errorBorder: OutlineInputBorder(
-                                    borderSide: const BorderSide(
-                                      width: 2.5,
-                                      color: Colors.red,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)),
-                                focusedErrorBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                    borderSide:
-                                        const BorderSide(color: Colors.red)),
-                                contentPadding: const EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 17),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      width: 3, color: MyDecoration.green),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                labelText: "Email Address",
-                                labelStyle: const TextStyle(
-                                    color: Colors.grey, fontFamily: "Poppins"),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      width: 2.5,
-                                      color: MyDecoration.green,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)),
-                              ),
+                              decoration: TextInputDecoration.getInputDecoration(labelText: "Email Address")
                             ),
                             const SizedBox(
                               height: 35,
@@ -314,10 +234,10 @@ class _SignUpPageState extends State<SignUpPage> {
                               },
                               style: ElevatedButton.styleFrom(
                                   padding: EdgeInsets.symmetric(
-                                      vertical: 10,
+                                      vertical: 12,
                                       horizontal:
                                           MediaQuery.of(context).size.width *
-                                              0.3),
+                                              0.2),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(40))),
                               child: const Text("Sign up",

@@ -1,4 +1,4 @@
-import 'package:biome/client/pages/Home/CommunityPage.dart';
+import 'package:biome/client/pages/Home/Community/CommunityPage.dart';
 import 'package:biome/client/pages/Home/PlantsPage.dart';
 import 'package:biome/client/pages/Home/Profile/ProfilePage.dart';
 import 'package:biome/client/pages/Home/homeScreen.dart';
