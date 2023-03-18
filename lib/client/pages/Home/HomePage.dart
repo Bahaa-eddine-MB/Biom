@@ -1,5 +1,5 @@
 import 'package:biome/client/pages/Home/Community/CommunityPage.dart';
-import 'package:biome/client/pages/Home/PlantsPage.dart';
+import 'package:biome/client/pages/Home/Plant/PlantsPage.dart';
 import 'package:biome/client/pages/Home/Profile/ProfilePage.dart';
 import 'package:biome/client/pages/Home/homeScreen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';

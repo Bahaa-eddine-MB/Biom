@@ -1,3 +1,4 @@
+import 'package:biome/client/pages/Home/HomePage.dart';
 import 'package:biome/client/pages/Home/TreesScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +38,7 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.back();
+                      Get.to(()=>const HomePage());
                     },
                     child: Container(
                       width: 60.0,

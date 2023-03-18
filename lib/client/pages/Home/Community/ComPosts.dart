@@ -1,7 +1,6 @@
 import 'package:biome/client/components/Post.dart';
 import 'package:flutter/material.dart';
 
-import '../../../utils/Decoration.dart';
 
 class ComPosts extends StatefulWidget {
   const ComPosts({Key? key}) : super(key: key);
