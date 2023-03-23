@@ -94,7 +94,7 @@ class _PlantsPageState extends State<PlantsPage> with TickerProviderStateMixin {
           Expanded(
             child: TabBarView(
               controller: tabController,
-              children: const [Indoor(), Outdoor(), SizedBox()],
+              children: const [Indoor(), Outdoor(), Indoor()],
             ),
           ),
         ],

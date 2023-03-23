@@ -1,7 +1,9 @@
 import 'package:biome/client/utils/Decoration.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/indoor.dart';
+import 'bottomSheetPlant.dart';
 
 class Indoor extends StatefulWidget {
   const Indoor({super.key});
@@ -32,7 +34,6 @@ class _IndoorState extends State<Indoor> {
                     image: AssetImage('images/background.png'),
                     fit: BoxFit.fitWidth,
                   ),
-                  
                 ),
               ),
               Positioned(
@@ -56,10 +57,13 @@ class _IndoorState extends State<Indoor> {
                       height: 10,
                     ),
                     GestureDetector(
-                      onTap: (){
-                        
-                      },
-                      child: Image.asset("images/add to my plants.png"))
+                        onTap: () {
+                          Get.bottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                               BottomSheetPlant(title:Indoorcontents[index].title,image:Indoorcontents[index].image,));
+                        },
+                        child: Image.asset("images/add to my plants.png"))
                   ],
                 ),
               ),

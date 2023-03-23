@@ -107,7 +107,7 @@ class _AddCardPageState extends State<AddCardPage> {
                         if (val!.isEmpty) {
                           return "This field cannot be empty!";
                         }
-      
+
                         return null;
                       },
                       decoration: TextInputDecoration.getInputDecoration(
@@ -124,7 +124,7 @@ class _AddCardPageState extends State<AddCardPage> {
                         if (val!.isEmpty) {
                           return "This field cannot be empty!";
                         }
-      
+
                         return null;
                       },
                       decoration: TextInputDecoration.getInputDecoration(
@@ -156,7 +156,7 @@ class _AddCardPageState extends State<AddCardPage> {
                         if (val!.isEmpty) {
                           return "This field cannot be empty!";
                         }
-      
+
                         return null;
                       },
                       decoration: TextInputDecoration.getInputDecoration(
@@ -170,7 +170,7 @@ class _AddCardPageState extends State<AddCardPage> {
                       ElevatedButton(
                         onPressed: () {
                           formKey.currentState?.save();
-      
+
                           if (formKey.currentState!.validate()) {
                             Get.to(() => const Purchase());
                           }

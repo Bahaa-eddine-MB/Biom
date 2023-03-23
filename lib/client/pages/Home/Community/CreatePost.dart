@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../utils/Decoration.dart';
 
 class CreatePost extends StatefulWidget {
@@ -16,10 +15,7 @@ class _CreatePostState extends State<CreatePost> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          iconTheme: IconThemeData(
-            color: MyDecoration.green,
-            size: 30 
-          ),
+          iconTheme: IconThemeData(color: MyDecoration.green, size: 30),
           elevation: 0,
           backgroundColor: Colors.transparent,
         ),
@@ -67,7 +63,7 @@ class _CreatePostState extends State<CreatePost> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                    onPrimary: MyDecoration.lightBrown,
+                    foregroundColor: MyDecoration.lightBrown,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 child: Container(
