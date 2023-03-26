@@ -61,19 +61,16 @@ class _MyPlants extends State<MyPlants> {
                     ),
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 5,
-                          horizontal: 15),
+                          vertical: 5, horizontal: 15),
                       decoration: BoxDecoration(
-                        color: MyDecoration.green,
-                        borderRadius: BorderRadius.circular(5)
-                      ),
+                          color: MyDecoration.green,
+                          borderRadius: BorderRadius.circular(5)),
                       child: const Text("Good",
                           style: TextStyle(
                               color: Colors.white,
                               fontFamily: "Poppins",
                               fontSize: 12)),
                     ),
-           
                   ],
                 ),
               ),
@@ -95,7 +92,8 @@ class _MyPlants extends State<MyPlants> {
                 right: 18,
                 child: GestureDetector(
                     onTap: () {
-                          Get.to(() => PlantInfo(
+                      Get.to(() => PlantInfo(
+                          description: outdoorcontents[index].description,
                           name: outdoorcontents[index].title,
                           image: outdoorcontents[index].image,
                           info1: outdoorcontents[index].info1,

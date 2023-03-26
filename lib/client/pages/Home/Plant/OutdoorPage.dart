@@ -38,7 +38,11 @@ class _OutdoorState extends State<Outdoor> {
                 ),
               ),
               Positioned(
-                  bottom: 10, child: Image.asset(outdoorcontents[index].image,height: 110,)),
+                  bottom: 10,
+                  child: Image.asset(
+                    outdoorcontents[index].image,
+                    height: 110,
+                  )),
               Positioned(
                 left: 110,
                 top: 30,
@@ -58,13 +62,16 @@ class _OutdoorState extends State<Outdoor> {
                       height: 10,
                     ),
                     GestureDetector(
-                      onTap: (){
-                             Get.bottomSheet(
+                        onTap: () {
+                          Get.bottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
-                               BottomSheetPlant(title:outdoorcontents[index].title,image:outdoorcontents[index].image,));
-                      },
-                      child: Image.asset("images/add to my plants.png"))
+                              BottomSheetPlant(
+                                title: outdoorcontents[index].title,
+                                image: outdoorcontents[index].image,
+                              ));
+                        },
+                        child: Image.asset("images/add to my plants.png"))
                   ],
                 ),
               ),
@@ -86,7 +93,8 @@ class _OutdoorState extends State<Outdoor> {
                 right: 18,
                 child: GestureDetector(
                     onTap: () {
-                            Get.to(() => PlantInfo(
+                      Get.to(() => PlantInfo(
+                          description: outdoorcontents[index].description,
                           name: outdoorcontents[index].title,
                           image: outdoorcontents[index].image,
                           info1: outdoorcontents[index].info1,

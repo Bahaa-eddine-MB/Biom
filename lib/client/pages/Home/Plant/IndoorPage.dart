@@ -94,6 +94,7 @@ class _IndoorState extends State<Indoor> {
                 child: GestureDetector(
                     onTap: () {
                       Get.to(() => PlantInfo(
+                          description: Indoorcontents[index].description,
                           name: Indoorcontents[index].title,
                           image: Indoorcontents[index].image,
                           info1: Indoorcontents[index].info1,

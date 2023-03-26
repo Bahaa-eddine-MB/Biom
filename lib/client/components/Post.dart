@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:readmore/readmore.dart';
 import '../utils/Decoration.dart';
 import 'buttomSheet.dart';
 
@@ -96,11 +97,29 @@ class _PostState extends State<Post> {
                             top: 25),
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.6,
-                          child: const Text(
-                            "I would love to share with you my little collection",
-                            style:
-                                TextStyle(fontFamily: "Poppins", fontSize: 15),
+                          child: ReadMoreText(
+                            "I would love to share with you my little collection ",
+                            trimLines: 2,
+                            colorClickableText: MyDecoration.green,
+                            trimMode: TrimMode.Line,
+                            trimCollapsedText: 'Read more',
+                            trimExpandedText: '\nRead less',
+                            style: const TextStyle(
+                                fontFamily: "Poppins", fontSize: 15),
+                            moreStyle: TextStyle(
+                                fontFamily: "Poppins",
+                                fontSize: 15,
+                                color: MyDecoration.green,
+                                decoration: TextDecoration.underline,
+                                decorationColor: MyDecoration.green),
+                            lessStyle: TextStyle(
+                                fontFamily: "Poppins",
+                                fontSize: 15,
+                                color: MyDecoration.green,
+                                decoration: TextDecoration.underline,
+                                decorationColor: MyDecoration.green),
                           ),
+                 
                         ),
                       ),
                     ],
@@ -224,4 +243,3 @@ class _PostState extends State<Post> {
     );
   }
 }
-

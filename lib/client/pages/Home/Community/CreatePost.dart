@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../utils/Decoration.dart';
 
 class CreatePost extends StatefulWidget {
@@ -14,11 +15,37 @@ class _CreatePostState extends State<CreatePost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          iconTheme: IconThemeData(color: MyDecoration.green, size: 30),
-          elevation: 0,
-          backgroundColor: Colors.transparent,
+         appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+    
+        leading:  Container(
+          margin: const EdgeInsets.only(left: 10),
+          child: GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Container(
+                        width: 60.0,
+                        height: 60.0,
+                        decoration: BoxDecoration(
+                          color: MyDecoration.green,
+                          shape: BoxShape.circle,
+                      
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Image(
+                            image: AssetImage("images/icon2.png"),
+                            height: 40,
+                            width: 40,
+                          ),
+                        ),
+                      ),
+                    ),
         ),
+            
+      ),
         body: Form(
           key: formKey,
           child: ListView(

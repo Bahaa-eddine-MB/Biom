@@ -2,8 +2,10 @@ import 'package:biome/client/pages/Home/Plant/InfoWidget.dart';
 import 'package:biome/client/utils/Decoration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 
 class PlantInfo extends StatefulWidget {
+  final String description;
   final String name;
   final String image;
   final String info1;
@@ -20,7 +22,10 @@ class PlantInfo extends StatefulWidget {
       required this.info3,
       required this.info4,
       required this.info5,
-      required this.info6, required this.image, required this.name})
+      required this.info6,
+      required this.image,
+      required this.name,
+      required this.description})
       : super(key: key);
 
   @override
@@ -72,7 +77,9 @@ class _PlantInfoState extends State<PlantInfo> {
                         )),
                     Row(
                       children: [
-                        Image.asset(widget.image,),
+                        Image.asset(
+                          widget.image,
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -94,7 +101,7 @@ class _PlantInfoState extends State<PlantInfo> {
                             const SizedBox(
                               height: 20,
                             ),
-                             Text(
+                            Text(
                               widget.name,
                               style: const TextStyle(
                                   color: Colors.white,
@@ -113,26 +120,51 @@ class _PlantInfoState extends State<PlantInfo> {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
-                      "Snake Plant",
-                      style: TextStyle(
+                      widget.name,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w600,
                           fontSize: 24),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "The snake plant, also known as Sansevieria or mother-in-law's tongue, is a species of evergreen perennial plant characterized by its long, upright leaves that are thick and sword-shaped with pointed tips. It is a low-maintenance indoor plant that is tolerant of low light and drought conditions.",
-                      style: TextStyle(
+                    ReadMoreText(
+                      widget.description,
+                      trimLines: 2,
+                      colorClickableText: MyDecoration.green,
+                      trimMode: TrimMode.Line,
+                      trimCollapsedText: 'Read more',
+                      trimExpandedText: 'Read less',
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontFamily: "Abel",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 19),
+                      moreStyle: const TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Colors.white,
+                          fontFamily: "Abel",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 19),
+                      lessStyle: const TextStyle(
+                          decoration: TextDecoration.underline,
                           color: Colors.white,
                           fontFamily: "Abel",
                           fontWeight: FontWeight.w500,
                           fontSize: 19),
                     ),
+                    // Text(
+                    //   widget.description,
+                    //   style: const TextStyle(
+                    //       color: Colors.white,
+                    //       fontFamily: "Abel",
+                    //       fontWeight: FontWeight.w500,
+                    //       fontSize: 19),
+                    // ),
                   ],
                 ),
               ),
