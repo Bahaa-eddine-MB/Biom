@@ -32,9 +32,7 @@ class InfoWidget extends StatelessWidget {
             ),
             height: 65,
             width: 50,
-            child: SizedBox(
-
-              child: Image.asset(image)),
+            child: Image.asset(image),
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
