@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Biom',
       theme: ThemeData(
           primarySwatch: const MaterialColor(
-        0xFF83BD75,
+        0xFF83BD75, 
         <int, Color>{
           50: Color(0xFFF2FFE9),
           100: Color(0xFFD8FFC7),

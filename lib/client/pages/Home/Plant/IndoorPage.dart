@@ -1,3 +1,4 @@
+import 'package:biome/client/pages/Home/Plant/PlantInfo.dart';
 import 'package:biome/client/utils/Decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +38,11 @@ class _IndoorState extends State<Indoor> {
                 ),
               ),
               Positioned(
-                  bottom: 10, child: Image.asset(Indoorcontents[index].image)),
+                  bottom: 10,
+                  child: Image.asset(
+                    Indoorcontents[index].image,
+                    height: 110,
+                  )),
               Positioned(
                 left: 110,
                 top: 30,
@@ -61,7 +66,10 @@ class _IndoorState extends State<Indoor> {
                           Get.bottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
-                               BottomSheetPlant(title:Indoorcontents[index].title,image:Indoorcontents[index].image,));
+                              BottomSheetPlant(
+                                title: Indoorcontents[index].title,
+                                image: Indoorcontents[index].image,
+                              ));
                         },
                         child: Image.asset("images/add to my plants.png"))
                   ],
@@ -84,7 +92,17 @@ class _IndoorState extends State<Indoor> {
                 top: 50,
                 right: 18,
                 child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => PlantInfo(
+                          name: Indoorcontents[index].title,
+                          image: Indoorcontents[index].image,
+                          info1: Indoorcontents[index].info1,
+                          info2: Indoorcontents[index].info2,
+                          info3: Indoorcontents[index].info3,
+                          info4: Indoorcontents[index].info4,
+                          info5: Indoorcontents[index].info5,
+                          info6: Indoorcontents[index].info6));
+                    },
                     child: const Image(
                       image: AssetImage('images/icon.png'),
                       height: 20,

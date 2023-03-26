@@ -1,5 +1,6 @@
 import 'package:biome/client/pages/Home/Plant/IndoorPage.dart';
 import 'package:biome/client/pages/Home/Plant/OutdoorPage.dart';
+import 'package:biome/client/pages/Home/Plant/myPlants.dart';
 import 'package:flutter/material.dart';
 import '../../../utils/Decoration.dart';
 import '../../../utils/TextFeildDecoration.dart';
@@ -94,7 +95,7 @@ class _PlantsPageState extends State<PlantsPage> with TickerProviderStateMixin {
           Expanded(
             child: TabBarView(
               controller: tabController,
-              children: const [Indoor(), Outdoor(), Indoor()],
+              children: const [Indoor(), Outdoor(), MyPlants()],
             ),
           ),
         ],

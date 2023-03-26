@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/Decoration.dart';
 import '../../../utils/outdoor.dart';
+import 'PlantInfo.dart';
+import 'bottomSheetPlant.dart';
 
 class Outdoor extends StatefulWidget {
   const Outdoor({super.key});
@@ -35,7 +38,7 @@ class _OutdoorState extends State<Outdoor> {
                 ),
               ),
               Positioned(
-                  bottom: 10, child: Image.asset(outdoorcontents[index].image)),
+                  bottom: 10, child: Image.asset(outdoorcontents[index].image,height: 110,)),
               Positioned(
                 left: 110,
                 top: 30,
@@ -55,7 +58,12 @@ class _OutdoorState extends State<Outdoor> {
                       height: 10,
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                             Get.bottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                               BottomSheetPlant(title:outdoorcontents[index].title,image:outdoorcontents[index].image,));
+                      },
                       child: Image.asset("images/add to my plants.png"))
                   ],
                 ),
@@ -77,7 +85,17 @@ class _OutdoorState extends State<Outdoor> {
                 top: 50,
                 right: 18,
                 child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                            Get.to(() => PlantInfo(
+                          name: outdoorcontents[index].title,
+                          image: outdoorcontents[index].image,
+                          info1: outdoorcontents[index].info1,
+                          info2: outdoorcontents[index].info2,
+                          info3: outdoorcontents[index].info3,
+                          info4: outdoorcontents[index].info4,
+                          info5: outdoorcontents[index].info5,
+                          info6: outdoorcontents[index].info6));
+                    },
                     child: const Image(
                       image: AssetImage('images/icon.png'),
                       height: 20,
