@@ -76,15 +76,18 @@ class _PlantInfoState extends State<PlantInfo> {
                                   bottomLeft: Radius.circular(10))),
                         )),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset(
-                          widget.image,
+                          widget.image,width: 200,
                         ),
                         Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
+
                             const SizedBox(
-                              height: 40,
+                              height: 138,
                             ),
                             Row(
                               children: [
@@ -99,7 +102,7 @@ class _PlantInfoState extends State<PlantInfo> {
                               ],
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 28,
                             ),
                             Text(
                               widget.name,

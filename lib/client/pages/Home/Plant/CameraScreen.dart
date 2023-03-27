@@ -56,119 +56,121 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     if (init) {
-      return Scaffold(
-        body: Stack(
-          children: [
-            Positioned.fill(
-              child: CameraPreview(cameraController),
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Image.asset(
-                "images/Subtract.png",
-                height: MediaQuery.of(context).size.height * 0.7,
+      return SafeArea(
+        child: Scaffold(
+          body: Stack(
+            children: [
+              Positioned.fill(
+                child: CameraPreview(cameraController),
               ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: CustomPaint(
-                size: Size(500, (500 * 0.25).toDouble()),
-                painter: RPSCustomPainter(),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.photo,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                      onPressed: () {
-                        Get.to(()=>const ResultFail());
-                      },
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.refresh_outlined,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                      onPressed: () async {
-                        setState(() {
-                          direction = direction == 0 ? 1 : 0;
-                          startCamera(direction);
-                        });
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
+              Align(
+                alignment: Alignment.center,
+                child: Image.asset(
+                  "images/Subtract.png",
+                  height: MediaQuery.of(context).size.height * 0.7,
                 ),
-                child: GestureDetector(
-                  onTap: () {
-                    cameraController.takePicture().then((XFile? file) {
-                      if (mounted) {
-                        if (file != null) {
-                          print("Picture saved to ${file.path}");
-                          Get.to(()=>const ScanResult());
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: CustomPaint(
+                  size: Size(500, (500 * 0.25).toDouble()),
+                  painter: RPSCustomPainter(),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
+                      child: IconButton(
+                        icon: const Icon(
+                          Icons.photo,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        onPressed: () {
+                          Get.to(()=>const ResultFail());
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: IconButton(
+                        icon: const Icon(
+                          Icons.refresh_outlined,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                        onPressed: () async {
+                          setState(() {
+                            direction = direction == 0 ? 1 : 0;
+                            startCamera(direction);
+                          });
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      cameraController.takePicture().then((XFile? file) {
+                        if (mounted) {
+                          if (file != null) {
+                            print("Picture saved to ${file.path}");
+                            Get.to(()=>const ScanResult());
+                          }
                         }
-                      }
-                    });
-                  },
-                  child: const Icon(
-                    Icons.camera_outlined,
-                    color: Colors.white,
-                    size: 100,
+                      });
+                    },
+                    child: const Icon(
+                      Icons.camera_outlined,
+                      color: Colors.white,
+                      size: 100,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Align(
-              alignment: AlignmentDirectional.topStart,
-              child: Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: GestureDetector(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: Container(
-                    width: 60.0,
-                    height: 60.0,
-                    decoration: BoxDecoration(
-                      color: MyDecoration.green,
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Image(
-                        image: AssetImage("images/icon2.png"),
-                        height: 40,
-                        width: 40,
+              Align(
+                alignment: AlignmentDirectional.topStart,
+                child: Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: Container(
+                      width: 60.0,
+                      height: 60.0,
+                      decoration: BoxDecoration(
+                        color: MyDecoration.green,
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Image(
+                          image: AssetImage("images/icon2.png"),
+                          height: 40,
+                          width: 40,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     } else {

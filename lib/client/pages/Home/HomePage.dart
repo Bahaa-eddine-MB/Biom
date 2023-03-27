@@ -16,54 +16,58 @@ class _HomePageState extends State<HomePage> {
   int current = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: getSelectedPage(index: current),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.transparent,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 10,
-              blurRadius: 10,
-              offset: const Offset(0, 10),
-            ),
-          ],
-        ),
-        child: CurvedNavigationBar(
-          color: Colors.white,
-          onTap: (index) {
-            setState(() {
-              current = index;
-            });
-          },
-          items: [
-            Image(
-              image: AssetImage(current == 0
-                  ? "images/icons/tree.png"
-                  : "images/icons/tree-1.png"),
-              width: 45,
-            ),
-            Image(
-              image: AssetImage(current == 1
-                  ? "images/icons/people-1.png"
-                  : "images/icons/people.png"),
-              width: 45,
-            ),
-            Image(
-              image: AssetImage(current == 2
-                  ? "images/icons/potted-plant-1.png"
-                  : "images/icons/potted-plant.png"),
-              width: 45,
-            ),
-            Image(
-              image: AssetImage(current == 3
-                  ? "images/icons/user-1.png"
-                  : "images/icons/user.png"),
-              width: 45,
-            ),
-          ],
-          backgroundColor: Colors.transparent,
+    return SafeArea(
+      child: Scaffold(
+        body: getSelectedPage(index: current),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            
+            color: Colors.transparent,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 10,
+                blurRadius: 10,
+                offset: const Offset(0, 10),
+              ),
+            ],
+          ),
+          child: CurvedNavigationBar(
+            
+            color: Colors.white,
+            onTap: (index) {
+              setState(() {
+                current = index;
+              });
+            },
+            items: [
+              Image(
+                image: AssetImage(current == 0
+                    ? "images/icons/tree.png"
+                    : "images/icons/tree-1.png"),
+                width: 45,
+              ),
+              Image(
+                image: AssetImage(current == 1
+                    ? "images/icons/people-1.png"
+                    : "images/icons/people.png"),
+                width: 45,
+              ),
+              Image(
+                image: AssetImage(current == 2
+                    ? "images/icons/potted-plant-1.png"
+                    : "images/icons/potted-plant.png"),
+                width: 45,
+              ),
+              Image(
+                image: AssetImage(current == 3
+                    ? "images/icons/user-1.png"
+                    : "images/icons/user.png"),
+                width: 45,
+              ),
+            ],
+            backgroundColor: Colors.transparent,
+          ),
         ),
       ),
     );

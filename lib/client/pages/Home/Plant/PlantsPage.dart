@@ -34,6 +34,7 @@ class _PlantsPageState extends State<PlantsPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         leadingWidth: 0,
         leading: const SizedBox(),
         backgroundColor: Colors.transparent,
@@ -43,7 +44,7 @@ class _PlantsPageState extends State<PlantsPage> with TickerProviderStateMixin {
         ),
         actions: <Widget>[
          Padding(
-           padding: const EdgeInsets.only(right:20.0),
+           padding: const EdgeInsets.only(right:20),
            child: InkWell(
             borderRadius: BorderRadius.circular(50),
             onTap: (){
