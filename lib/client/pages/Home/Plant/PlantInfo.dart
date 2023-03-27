@@ -86,8 +86,8 @@ class _PlantInfoState extends State<PlantInfo> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
 
-                            const SizedBox(
-                              height: 138,
+                             SizedBox(
+                              height: MediaQuery.of(context).size.height*0.16,
                             ),
                             Row(
                               children: [
