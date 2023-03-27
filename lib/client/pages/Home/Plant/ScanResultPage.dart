@@ -102,7 +102,7 @@ class _ScanResult extends State<ScanResult> with TickerProviderStateMixin {
                           labelColor: Colors.white,
                           labelStyle: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                              fontSize: 18,
                               fontFamily: "Poppins",
                               color: MyDecoration.green),
                         ),

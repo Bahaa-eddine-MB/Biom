@@ -195,11 +195,11 @@ class RPSCustomPainter extends CustomPainter {
     path0.moveTo(0, size.height);
     path0.lineTo(size.width, size.height);
     path0.lineTo(size.width, size.height * 0.5000000);
-    path0.lineTo(size.width * 0.6160000, size.height * 0.5000000);
+    path0.lineTo(size.width * 0.62260000, size.height * 0.5000000);
     path0.quadraticBezierTo(size.width * 0.5884375, size.height * 0.2000000,
         size.width * 0.5000000, size.height * 0.2000000);
-    path0.quadraticBezierTo(size.width * 0.4115625, size.height * 0.2005000,
-        size.width * 0.3805000, size.height * 0.5000000);
+    path0.quadraticBezierTo(size.width * 0.4085625, size.height * 0.2005000,
+        size.width * 0.3770000, size.height * 0.5000000);
     path0.lineTo(0, size.height * 0.5000000);
     path0.lineTo(0, size.height);
     path0.close();
