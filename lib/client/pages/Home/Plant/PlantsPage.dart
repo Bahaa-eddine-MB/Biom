@@ -1,7 +1,9 @@
+import 'package:biome/client/pages/Home/Plant/CameraScreen.dart';
 import 'package:biome/client/pages/Home/Plant/IndoorPage.dart';
 import 'package:biome/client/pages/Home/Plant/OutdoorPage.dart';
 import 'package:biome/client/pages/Home/Plant/myPlants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../utils/Decoration.dart';
 import '../../../utils/TextFeildDecoration.dart';
 
@@ -45,7 +47,7 @@ class _PlantsPageState extends State<PlantsPage> with TickerProviderStateMixin {
            child: InkWell(
             borderRadius: BorderRadius.circular(50),
             onTap: (){
-         
+              Get.to(()=>const MainScreen());
             },
             child: Image.asset("images/scan.png"),
            ),
