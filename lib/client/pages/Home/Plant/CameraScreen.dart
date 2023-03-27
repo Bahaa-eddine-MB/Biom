@@ -1,3 +1,5 @@
+import 'package:biome/client/pages/Home/Plant/ResultFail.dart';
+import 'package:biome/client/pages/Home/Plant/ScanResultPage.dart';
 import 'package:biome/client/utils/Decoration.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -89,7 +91,7 @@ class _MainScreenState extends State<MainScreen> {
                         size: 30,
                       ),
                       onPressed: () {
-                        setState(() {});
+                        Get.to(()=>const ResultFail());
                       },
                     ),
                   ),
@@ -126,6 +128,7 @@ class _MainScreenState extends State<MainScreen> {
                       if (mounted) {
                         if (file != null) {
                           print("Picture saved to ${file.path}");
+                          Get.to(()=>const ScanResult());
                         }
                       }
                     });
@@ -189,13 +192,13 @@ class RPSCustomPainter extends CustomPainter {
     Path path0 = Path();
     path0.moveTo(0, size.height);
     path0.lineTo(size.width, size.height);
-    path0.lineTo(size.width, size.height * 0.4950000);
-    path0.lineTo(size.width * 0.6130000, size.height * 0.4970000);
-    path0.quadraticBezierTo(size.width * 0.5884375, size.height * 0.2010000,
-        size.width * 0.5002500, size.height * 0.2010000);
+    path0.lineTo(size.width, size.height * 0.5000000);
+    path0.lineTo(size.width * 0.6160000, size.height * 0.5000000);
+    path0.quadraticBezierTo(size.width * 0.5884375, size.height * 0.2000000,
+        size.width * 0.5000000, size.height * 0.2000000);
     path0.quadraticBezierTo(size.width * 0.4115625, size.height * 0.2005000,
-        size.width * 0.3855000, size.height * 0.4950000);
-    path0.lineTo(0, size.height * 0.4950000);
+        size.width * 0.3805000, size.height * 0.5000000);
+    path0.lineTo(0, size.height * 0.5000000);
     path0.lineTo(0, size.height);
     path0.close();
 
