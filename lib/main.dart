@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'client/pages/Getting Started/SplashScreen.dart';
-import 'client/pages/Home/Plant/locator.dart';
+
+
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  setupLocator();
+
   runApp(const MyApp());
 }
   

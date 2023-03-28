@@ -77,7 +77,7 @@ class _IndoorState extends State<Indoor> {
               ),
               Positioned(
                   right: 0,
-                  top: 12,
+                  top: 13,
                   child: Container(
                     decoration: BoxDecoration(
                       color: MyDecoration.green,
@@ -85,7 +85,7 @@ class _IndoorState extends State<Indoor> {
                           topRight: Radius.circular(10),
                           bottomRight: Radius.circular(10)),
                     ),
-                    height: 95,
+                    height: 92,
                     width: 50,
                   )),
               Positioned(

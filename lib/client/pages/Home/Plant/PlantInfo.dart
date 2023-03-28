@@ -79,7 +79,7 @@ class _PlantInfoState extends State<PlantInfo> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset(
-                          widget.image,width: 200,
+                          widget.image,width: MediaQuery.of(context).size.width*0.5,
                         ),
                         Column(
                           
@@ -87,7 +87,7 @@ class _PlantInfoState extends State<PlantInfo> {
                           children: [
 
                              SizedBox(
-                              height: MediaQuery.of(context).size.height*0.16,
+                              height: MediaQuery.of(context).size.height*0.17,
                             ),
                             Row(
                               children: [

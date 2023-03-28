@@ -149,7 +149,7 @@ class _LogingPageState extends State<LogingPage> {
                                       vertical: 12,
                                       horizontal:
                                           MediaQuery.of(context).size.width *
-                                              0.3),
+                                              0.26),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(40))),
                               child: const Text("Sign in",

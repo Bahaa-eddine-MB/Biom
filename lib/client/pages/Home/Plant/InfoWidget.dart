@@ -37,7 +37,7 @@ class InfoWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             height: 65,
-            width: 120,
+            width: MediaQuery.of(context).size.width*0.28,
             decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
